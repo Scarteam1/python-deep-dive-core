@@ -1,1 +1,1 @@
-# Python Deep Dive Core Tracker - Mastered Variable Re-Assignment Pointers  
+# Python Deep Dive Core Tracker - 20/161 Lectures Completed  
