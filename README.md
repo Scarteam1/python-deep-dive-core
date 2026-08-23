@@ -1,1 +1,1 @@
-# Python Deep Dive Core Tracker - 26/161 Lectures Completed  
+# Python Deep Dive Core Tracker - 27/161 Lectures Completed  
