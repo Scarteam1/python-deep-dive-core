@@ -3,11 +3,15 @@
 [![Python Version](https://shields.io)](https://python.org)
 [![License: MIT](https://shields.io)](https://opensource.org)
 
-An architectural deep-dive portfolio focusing on CPython memory optimization, runtime mechanics, and low-level object behaviors. Built systematically to establish the high-performance foundation required for designing large-scale Deep Learning pipelines and AI model serving infrastructure.
+## 🧑‍💻 The Engineer Profile
+* **Current Role:** Senior Linux Infrastructure Administrator / Support Engineer
+* **Target Track:** Core AI System Architect / Production MLOps Infrastructure Engineer
+
+> *"Leveraging a deep foundation in Unix systems administration, kernel process spaces, and configuration tracking to master low-level CPython engine mechanics. This repository serves as a verifiable production pipeline, establishing the hardware-efficient foundation required for large-scale Deep Learning serving systems and automated MLOps lifecycles."*
 
 ## 📊 Milestone Tracking Dashboard
 - **Current Progress:** 🟩🟩⬜⬜⬜⬜⬜⬜⬜⬜ **32 / 161 Lectures Completed**
-- **Target Track:** AI System Architect / Production MLOps Engineer
+- **Engineering Focus:** Python Functional Engine, Numerical Arrays, Raw Machine Learning from Scratch, Multi-Stage Containerization, and Self-Healing MLOps Pipelines.
 
 ## 🛠️ Low-Level Dissections Completed
 ### 📦 Section 1: Variable References & Memory Management (Lectures 1-30)
