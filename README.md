@@ -24,3 +24,15 @@ An architectural deep-dive portfolio focusing on CPython memory optimization, ru
 * **Dunder Math Architecture:** Mapped high-level symbols (`//`, `%`) to compiled C routines (`__floordiv__`, `__mod__`).
 * **Arbitrary Precision Logic:** Explored CPython's internal array structure (`ob_digit`) for unlimited size integers.
 * **Radix Serialization Boundaries:** Probed lexical parsing security walls, ASCII symbol lookups, and explicit radix string-to-base constructor constraints.
+
+<!---LeetCode Topics Start-->
+# LeetCode Topics
+## Array
+|  |
+| ------- |
+| [0001-two-sum](https://github.com/Scarteam1/python-deep-dive-core/tree/master/0001-two-sum) |
+## Hash Table
+|  |
+| ------- |
+| [0001-two-sum](https://github.com/Scarteam1/python-deep-dive-core/tree/master/0001-two-sum) |
+<!---LeetCode Topics End-->
