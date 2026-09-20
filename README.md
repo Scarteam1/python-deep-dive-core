@@ -35,4 +35,16 @@ An architectural deep-dive portfolio focusing on CPython memory optimization, ru
 |  |
 | ------- |
 | [0001-two-sum](https://github.com/Scarteam1/python-deep-dive-core/tree/master/0001-two-sum) |
+## Tree
+|  |
+| ------- |
+| [2331-evaluate-boolean-binary-tree](https://github.com/Scarteam1/python-deep-dive-core/tree/master/2331-evaluate-boolean-binary-tree) |
+## Depth-First Search
+|  |
+| ------- |
+| [2331-evaluate-boolean-binary-tree](https://github.com/Scarteam1/python-deep-dive-core/tree/master/2331-evaluate-boolean-binary-tree) |
+## Binary Tree
+|  |
+| ------- |
+| [2331-evaluate-boolean-binary-tree](https://github.com/Scarteam1/python-deep-dive-core/tree/master/2331-evaluate-boolean-binary-tree) |
 <!---LeetCode Topics End-->
