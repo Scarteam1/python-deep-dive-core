@@ -13,13 +13,30 @@ def main():
     purple_count = 10 - green_count
     bar = '??' * green_count + '??' * purple_count
     
-    # Read the file
+    # Read the current README file
     with open('README.md', 'r', encoding='utf-8') as f_in:
         content = f_in.read()
         
-    # Surgically replace the scrambled bar and match the text layout
-    updated = re.sub(r'Current Progress:\s*.*?\s*\d+ / 161', f'Current Progress: {bar} {milestone} / 161', content)
-    updated = re.sub(r'\(Lectures 31-\d+\)', f'(Lectures 31-{milestone})', updated)
+    # Reset the entire progress line cleanly to bypass scrambled characters
+    # This matches exactly the title indicator header block on your portfolio
+    pattern = r'#+ ?? Milestone Tracking Dashboard.*?
+\s*•\s*Current Progress:.*?
+'
+    replacement = f'## ?? Milestone Tracking Dashboard\n\n* **Current Progress:** {bar} {milestone} / 161 Lectures Completed\n'
+    
+    # If the markdown header doesn't use the emoji, search for standard fallback lines
+    if "Milestone Tracking Dashboard" in content:
+        # Surgical line-by-line replacement to clear old question marks completely
+        lines = content.split('\n')
+        for i, line in enumerate(lines):
+            if "Current Progress:" in line:
+                lines[i] = f'* **Current Progress:** {bar} {milestone} / 161 Lectures Completed'
+            if "(Lectures 31-" in line:
+                lines[i] = re.sub(r'\(Lectures 31-\d+\)', f'(Lectures 31-{milestone})', line)
+        updated = '\n'.join(lines)
+    else:
+        updated = re.sub(pattern, replacement, content, flags=re.DOTALL)
+        updated = re.sub(r'\(Lectures 31-\d+\)', f'(Lectures 31-{milestone})', updated)
     
     # Write it back cleanly in raw UTF-8 format
     with open('README.md', 'w', encoding='utf-8') as f_out:
