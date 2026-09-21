@@ -1,29 +1,11 @@
 @echo off
 cls
-echo ===================================================
-echo     INITIALIZING AUTOMATED PRODUCTION DEPLOYMENT   
-echo ===================================================
-
-echo [1/4] Syncing cloud tracking branches...
+echo [1/3] Syncing...
 git pull origin main --rebase
-
-set /p milestone="Enter the completed Lecture Number (e.g., 59): "
-
-echo.
-echo [2/4] Executing background text engine pipeline...
-python update_readme.py %milestone%
-
-echo.
-echo [3/4] Staging changes and logging architecture milestone commitments...
+set /p milestone="Enter Lecture Number: "
+python -c "import re; f=open('README.md', 'r', encoding='utf-8'); c=f.read(); f.close(); u=re.sub(r'Current Progress:\s*.*?\s*\d+ / 161', f'Current Progress: 🟩🟩🟩🟩🟩🟩🟪🟪🟪🟪 59 / 161', c); u=re.sub(r'\(Lectures 31-\d+\)', f'(Lectures 31-59)', u); f=open('README.md', 'w', encoding='utf-8'); f.write(u); f.close()"
 git add .
-git commit -m "Udemy: Completed Lecture %milestone% / 161" -m "Automated systems infrastructure sync pipeline execution tracking progress milestones."
-
-echo.
-echo [4/4] Deploying pristine assets straight to GitHub live branch...
+git commit -m "Udemy: Completed Lecture 59 / 161"
 git push origin main
-
-echo.
-echo ===================================================
-echo   DEPLOYMENT SUCCESSFUL! DISCONNECTING PIPELINE.   
-echo ===================================================
+echo Done!
 pause
