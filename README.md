@@ -16,7 +16,7 @@ An architectural deep-dive portfolio focusing on CPython memory optimization, ru
 
 ## 🛠️ Low-Level Dissections Completed
 
-**### 🗄️ **Section 1: Introduction (Lectures 1-4)**✅**
+**### 🗄️ Section 1: Introduction (Lectures 1-4)✅**
 * **Environment Architecture:** Configured local project virtualization anchors, core tracking path environments, and verified base CPython interpreter runtime compilation builds.
 
 **### 🗄️ Section 2: A Quick Refresher - Basics Review (Lectures 5-14)✅**
