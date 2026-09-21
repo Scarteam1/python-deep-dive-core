@@ -3,19 +3,21 @@ import re
 
 def main():
     if len(sys.argv) < 2: return
-    milestone = sys.argv[1]
+    milestone = sys.argv
     m = int(milestone)
     total = 161
     
-    # Slim 20-Character Precision Grid
+    # Precision 20-character metric grid
     max_blocks = 20
-    
-    # Calculate exact filled segments
     green_count = int(round((m / total) * max_blocks))
     gray_count = max_blocks - green_count
     
-    # Build the colorful slim telemetry string
-    bar_string = "??" * green_count + "⬛" * gray_count
+    # SYSTEM SOLVER: Use pure text hexadecimal escape codes instead of raw emojis
+    # This completely immunizes the file from terminal or git system translation bugs.
+    green_square = "\U0001F7E9"
+    dark_square = "\U00002B1B"
+    
+    bar_string = green_square * green_count + dark_square * gray_count
     
     with open('README.md', 'r', encoding='utf-8', errors='ignore') as f_in:
         lines = f_in.readlines()
