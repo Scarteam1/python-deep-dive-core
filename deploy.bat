@@ -7,11 +7,11 @@ echo ===================================================
 echo [1/4] Syncing cloud tracking branches...
 git pull origin main --rebase
 
-set /p milestone="Enter the completed Lecture Number (e.g., 44): "
+set /p milestone="Enter the completed Lecture Number (e.g., 59): "
 
 echo.
-echo [2/4] Advancing visual portfolio README dashboard matrix to Lecture %milestone%...
-python -c "import re; f=open('README.md', 'r', encoding='utf-8'); c=f.read(); f.close(); u=re.sub(r'\d+ / 161 Lectures Completed', f'%milestone% / 161 Lectures Completed', c); u=re.sub(r'\(Lectures 31-\d+\)', f'(Lectures 31-%milestone%)', u); f=open('README.md', 'w', encoding='utf-8'); f.write(u); f.close()"
+echo [2/4] Recalculating and repainting visual portfolio progress matrix...
+python -c "import re; m = int('%milestone%'); total = 161; green_count = int(round((m / total) * 10)); purple_count = 10 - green_count; bar = '??' * green_count + '??' * purple_count; f = open('README.md', 'r', encoding='utf-8'); c = f.read(); f.close(); u = re.sub(r'Current Progress:\s*[^0-9]*\s*\d+ / 161', f'Current Progress: {bar} %milestone% / 161', c); u = re.sub(r'\(Lectures 31-\d+\)', f'(Lectures 31-%milestone%)', u); f = open('README.md', 'w', encoding='utf-8'); f.write(u); f.close()"
 
 echo.
 echo [3/4] Staging changes and logging architecture milestone commitments...
