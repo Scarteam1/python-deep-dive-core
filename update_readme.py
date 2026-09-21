@@ -7,30 +7,22 @@ def main():
     m = int(milestone)
     total = 161
     
-    # Advanced Linux Smooth-Loading Math (Total width of 15 characters)
-    max_blocks = 15
-    fractional_symbols = [" ", "▏", "▎", "▍", "▌", "▋", "▊", "▉", "█"]
+    # Slim 20-Character Precision Grid
+    max_blocks = 20
     
-    raw_score = (m / total) * max_blocks
-    full_blocks = int(raw_score)
-    remainder = raw_score - full_blocks
-    symbol_index = int(remainder * 8)
+    # Calculate exact filled segments
+    green_count = int(round((m / total) * max_blocks))
+    gray_count = max_blocks - green_count
     
-    # Assemble the high-fidelity telemetry bar
-    bar_string = "█" * full_blocks
-    if full_blocks < max_blocks:
-        bar_string += fractional_symbols[symbol_index]
-        bar_string += " " * (max_blocks - full_blocks - 1)
-        
-    # Wrap it in clean markdown syntax accents
-    final_bar = f"`|{bar_string}|`"
+    # Build the colorful slim telemetry string
+    bar_string = "??" * green_count + "⬛" * gray_count
     
     with open('README.md', 'r', encoding='utf-8', errors='ignore') as f_in:
         lines = f_in.readlines()
         
     for i, line in enumerate(lines):
         if "Current Progress:" in line:
-            lines[i] = f'  * **Current Progress:** {final_bar} {milestone} / 161 Lectures Completed\n'
+            lines[i] = f'  * **Current Progress:** {bar_string} {milestone} / 161 Lectures Completed\n'
         if "(Lectures 31-" in line:
             lines[i] = re.sub(r'\(Lectures 31-\d+\)', f'(Lectures 31-{milestone})', line)
             
