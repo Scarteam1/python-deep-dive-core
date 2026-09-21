@@ -10,8 +10,8 @@ git pull origin main --rebase
 set /p milestone="Enter the completed Lecture Number (e.g., 59): "
 
 echo.
-echo [2/4] Recalculating and repainting visual portfolio progress matrix...
-python -c "import re; m = int('%milestone%'); total = 161; green_count = int(round((m / total) * 10)); purple_count = 10 - green_count; bar = '??' * green_count + '??' * purple_count; f = open('README.md', 'r', encoding='utf-8'); c = f.read(); f.close(); u = re.sub(r'Current Progress:\s*[^0-9]*\s*\d+ / 161', f'Current Progress: {bar} %milestone% / 161', c); u = re.sub(r'\(Lectures 31-\d+\)', f'(Lectures 31-%milestone%)', u); f = open('README.md', 'w', encoding='utf-8'); f.write(u); f.close()"
+echo [2/4] Executing background text engine pipeline...
+python update_readme.py %milestone%
 
 echo.
 echo [3/4] Staging changes and logging architecture milestone commitments...
