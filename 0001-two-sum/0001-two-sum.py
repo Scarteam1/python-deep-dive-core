@@ -7,3 +7,5 @@ class Solution:
                 return [lookup_table[complement], index]
             lookup_table[num] = index
         return []
+
+

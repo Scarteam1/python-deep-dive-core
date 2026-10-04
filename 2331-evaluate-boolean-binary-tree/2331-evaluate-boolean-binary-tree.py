@@ -15,3 +15,4 @@ class Solution:
         if root.val == 3:
             return self.evaluateTree(root.left) and self.evaluateTree(root.right)
         
+
