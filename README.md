@@ -36,11 +36,18 @@ An architectural deep-dive portfolio focusing on CPython memory optimization, ru
 * **Arbitrary Precision Logic:** Explored CPython's internal digit array structures (`ob_digit`) that allow integers to expand dynamically and break standard 64-bit hardware overflow boundaries.
 * **Encoding & Telemetry Calibration:** Re-engineered automated markdown injection scripts to bypass local Windows OS file page encoding constraints (`cp1252`), establishing pure hexadecimal Unicode streams for robust telemetry delivery pipelines.
 
-<h3 align="left"><code>🛰️ SECTION 5 : FUNCTION PARAMETERS (Lectures 61-90 [In-Progress])🚀</code></h3>
+# 🗃️ SECTION 5 : FUNCTION PARAMETERS (Lectures 61-78)  ✅
 
-* **Positional Execution Matrix:** Auditing sequential variable parameter maps, memory pointer defaults, and dynamic iterable unpacking structures (`*args`).
-* **Keyword-Only Boundary Enforcements:** Implementing strict signature separation tokens (`*`) to ensure enterprise API design patterns are immune to silent argument matching data errors.
-* **Scope Resolution Telemetry:** Tracing local, non-local, global, and built-in namespace allocation layers (`LEGB` rule) across variable scopes and runtime closures.
+* **Positional Execution Matrix:** Audited sequential variable parameter maps, memory pointer defaults, and dynamic iterable unpacking structures (`*args`).
+* **Keyword-Only Boundary Enforcements:** Implemented strict signature separation tokens (`*`) and dynamic keyword configurations (`**kwargs`) to ensure enterprise API design patterns are immune to silent argument matching data errors.
+* **Scope Resolution Telemetry:** Traced local, non-local, global, and built-in namespace allocation layers (`LEGB rule`) across variable scopes and dynamic default runtime sentinel parameters (`None`).
+
+# 🚀 SECTION 6 : FIRST-CLASS FUNCTIONS (Lectures 79-90 [In-Progress]) ⚡
+
+* **First-Class Object Allocation:** Dissecting the memory mechanics of treating live function pointer references as first-class citizens on the CPython heap.
+* **Metadata Telemetry Extraction:** Compiling self-documenting code systems by surgically querying the live compiled string (`__doc__`) and type annotations dictionary (`__annotations__`) metadata arrays directly from runtime objects.
+* **Functional Routing Architecture:** Engineering decoupled higher-order proxy gateways capable of accepting callable objects as operational arguments downstream.
+
 
 
 <!---LeetCode Topics Start-->
