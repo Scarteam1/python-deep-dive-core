@@ -42,11 +42,15 @@ An architectural deep-dive portfolio focusing on CPython memory optimization, ru
 * Keyword-Only Boundary Enforcements: Implemented strict signature separation tokens ( `*` ) and dynamic keyword configurations ( `**kwargs` ) to ensure enterprise API design patterns are immune to silent argument matching data errors.
 * Scope Resolution Telemetry: Traced local, non-local, global, and built-in namespace allocation layers ( `LEGB rule` ) across variable scopes and dynamic default runtime sentinel parameters ( `None` ).
 
-<h3 align="left"><code><b>🚀 SECTION 6 : FIRST-CLASS FUNCTIONS (Lectures 79-90 [In-Progress]) ⚡</b></code></h3>
+* [x] **SECTION 6 : FIRST-CLASS FUNCTIONS (Lectures 79-96)** ✅
+    * **First-Class Object Allocation:** Dissecting the memory mechanics of treating live function pointer references as first-class citizens on the CPython heap.
+    * **Metadata Telemetry Extraction:** Compiling self-documenting code systems by surgically querying the live compiled string (`__doc__`) and type annotations dictionary (`__annotations__`) metadata arrays directly from runtime objects.
+    * **Functional Routing Architecture:** Engineering decoupled higher-order proxy gateways capable of accepting callable objects as operational arguments downstream (`map`, `filter`, `zip`).
+    * **Functional Memory & Pipeline Optimization:** Utilizing `functools.reduce` for vertical data stream reductions along with the `operator` module (`itemgetter`, `attrgetter`) to eliminate stack frame compilation latency inside MLOps telemetry pipelines.
 
-* First-Class Object Allocation: Dissecting the memory mechanics of treating live function pointer references as first-class citizens on the CPython heap.
-* Metadata Telemetry Extraction: Compiling self-documenting code systems by surgically querying the live compiled string ( `__doc__` ) and type annotations dictionary ( `__annotations__` ) metadata arrays directly from runtime objects.
-* Functional Routing Architecture: Engineering decoupled higher-order proxy gateways capable of accepting callable objects as operational arguments downstream.
+* [x] **SECTION 7 : SCOPES, CLOSURES, AND DECORATORS (Lectures 97+)** ⚡ *[In-Progress]*
+    * **Namespace Resolution Telemetry:** Tracing local, non-local, global, and built-in namespace allocation layers (`LEGB rule`) across variable scopes.
+
 
 
 
